@@ -101,7 +101,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Links */}
-            <div className="flex-1 flex flex-col items-center justify-center gap-8 px-6">
+            <div className="flex-1 flex flex-col items-center justify-start gap-2 mt-6 px-6">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.name}
@@ -111,7 +111,7 @@ const Navbar = () => {
                 >
                   <Link
                     to={link.href}
-                    className="font-serif text-4xl text-foreground hover:text-muted-foreground transition-colors"
+                    className="font-serif text-xl text-foreground hover:text-muted-foreground transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.name}
@@ -126,7 +126,7 @@ const Navbar = () => {
               >
                 <Link
                   to="/contact"
-                  className="btn-secondary w-full justify-center py-4 text-lg"
+                  className="btn-secondary w-full justify-center py-2 text-lg"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Get in touch
@@ -134,12 +134,6 @@ const Navbar = () => {
               </motion.div>
             </div>
 
-            {/* Mobile Menu Footer */}
-            <div className="p-12 text-center">
-              <p className="font-body text-sm text-muted-foreground tracking-widest uppercase">
-                Enhance Your Wellbeing
-              </p>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
